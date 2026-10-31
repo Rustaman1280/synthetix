@@ -20,6 +20,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm && tsc --emitDeclarationOnly",
     "test": "node --test tests/*.test.mjs",
+    "bench": "node benchmarks/benchmark.mjs",
     "benchmark": "node benchmarks/benchmark.mjs",
     "prepublishOnly": "npm run build && npm test"
   },
