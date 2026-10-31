@@ -1,0 +1,54 @@
+{
+  "name": "@crustdev/synthetix",
+  "version": "1.0.0",
+  "description": "Deterministic procedural terrain generation, multi-octave noise, and voxel biome engine SDK by CrustDev Labs.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm && tsc --emitDeclarationOnly",
+    "test": "node --test tests/*.test.mjs",
+    "benchmark": "node benchmarks/benchmark.mjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "procedural-generation",
+    "terrain-engine",
+    "perlin-noise",
+    "simplex-noise",
+    "voronoi",
+    "heightmap",
+    "voxel",
+    "roblox",
+    "threejs",
+    "game-dev",
+    "crustdev"
+  ],
+  "author": "Jumarr <rustaman@crusts.dev>",
+  "license": "MIT",
+  "homepage": "https://labs.crusts.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crustdev/synthetix"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2"
+  }
+}
